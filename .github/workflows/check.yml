@@ -1,8 +1,8 @@
-name: Laravel Test Build Release
+name: Laravel Test
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
   workflow_dispatch:
 
