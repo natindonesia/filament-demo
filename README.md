@@ -31,10 +31,13 @@ Generate application key:
 php artisan key:generate
 ```
 
-Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.
-
+Create a Database
 ```sh
-touch database/database.sqlite
+mysql -u root -p
+CREATE DATABASE filament_demo;
+CREATE USER 'filament_demo'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON filament_demo.* TO 'filament_demo'@'localhost';
+FLUSH PRIVILEGES;
 ```
 
 Run database migrations:
